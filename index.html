@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="epam.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="input-group search-head">
+      <input type="text" class="form-control" id="text-to-find">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" style="margin:0;" onclick="javascript: FindOnPage('text-to-find'); return false;">Search</button>
+        </span>
+    </div>
+        <button type="button" class="btn btn-default" style="margin:5px;">Add new</button>
+        <div class="panel panel-default" style="margin-top:10px;">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+      <div class="name"><a href="">Name <span class="glyphicon glyphicon-chevron-up" onclick="this.className = 'glyphicon glyphicon-chevron-down'"></span></a></div>
+      <div class="price"><a href="">Price <span class="glyphicon glyphicon-chevron-up" onclick="this.className = 'glyphicon glyphicon-chevron-down'"></span></a></div>
+      <div class="actions">Actions</div>
+  </div>
+  <!-- Table -->
+  <table class="table" id="table">
+    <tr>
+            <td style="width:50%;"><a href="#">Товар 1</a><span class="badge">5</span></td>
+        <td align="center">$12,352 25</td>
+        <td style="width:30%; text-align:center;">
+<a href="#" class=" btn btn-default" onclick="this.innerHTML = 'Upgrade'">Edit</a>
+<a href="#" class=" btn btn-default" onclick="confirm('Are you sure you want to perform this action?')">Delete</a>
+        </td>
+    </tr>
+        <tr>
+            <td><a href="#">Товар 2</a><span class="badge">5</span></td>
+        <td align="center">$12,352 25</td>
+        <td align="center">
+<a href="#" class=" btn btn-default" onclick="this.innerHTML = 'Upgrade'">Edit</a>
+<a href="#" class=" btn btn-default" onclick="confirm('Are you sure you want to perform this action?')">Delete</a>
+        </td>
+    </tr>
+        <tr>
+            <td><a href="#">Товар 3</a><span class="badge">5</span></td>
+        <td align="center">$12,352 25</td>
+        <td align="center">
+<a href="#" class=" btn btn-default" onclick="this.innerHTML = 'Upgrade'">Edit</a>
+<a href="#" class=" btn btn-default" onclick="confirm('Are you sure you want to perform this action?')">Delete</a>
+        </td>
+    </tr>
+  </table>
+</div>
+
+<table class="edition" cellspacing="">
+    <tr>
+        <td>Name: <span style="color:red">* Required field</span></td>
+        <td>Count:</td>
+        <td>Price:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text" class="form-control" size="50" id="getName"></td>
+        <td><input type="text" class="form-control" size="1" style="margin:0px 5px 0px 5px" id="getCount"></td>
+        <td><input type="text" class="form-control" style="margin:0px 5px 0px 10px" id="getPrice"></td>
+        <td><input type="button" onclick="add()" onfocus="this.value = 'Add / Upgrade'" class="btn btn-default" style="margin:0px 5px 0px 15px" value="Add"></td>
+    </tr>
+</table>
+</body>
+</html>
